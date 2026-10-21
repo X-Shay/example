@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinyi Xia - Personal Website</title>
+    <link rel="stylesheet" href="mystylesheet.css">
+</head>
+<body>
+
+    <!-- 顶部固定半透明毛玻璃导航栏 -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="site-title">Xinyi Xia</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-item active" data-target="home">Home</a></li>
+                    <li><a href="#" class="nav-item" data-target="about">About Me</a></li>
+                    <li><a href="#" class="nav-item" data-target="reflection">Reflection</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 主内容区域 -->
+        <main>
+            <!-- 1. Home 页面 (Landing Page - 带有静态点阵装饰素材) -->
+            <section id="home" class="page-section active">
+                <div class="hero-container">
+                    <!-- 分散静态装饰素材：左上花朵、右上八角星、左下八角星、右下花朵 -->
+                    <div class="decor-item flower-top-left"></div>
+                    <div class="decor-item star-top-right"></div>
+                    <div class="decor-item star-bottom-left"></div>
+                    <div class="decor-item flower-bottom-right"></div>
+
+                    <h1 class="hero-title">Hi! I am Xinyi Xia</h1>
+                    <p class="hero-subtitle">Welcome to my website</p>
+                </div>
+            </section>
+
+            <!-- 2. About Me 页面 -->
+            <section id="about" class="page-section">
+                <h1 class="about-main-title">About me</h1>
+                <div class="about-grid">
+                    <!-- 左侧照片与名字 -->
+                    <div class="about-sidebar">
+                        <div class="profile-image-container">
+                            <img src="images/My photo.jpg" alt="Xinyi Xia">
+                        </div>
+                        <h2 class="profile-name">XINYI XIA</h2>
+                    </div>
+
+                    <!-- 右侧简历信息 -->
+                    <div class="about-content">
+                        <div class="about-section full-width">
+                            <h3>EDUCATION</h3>
+                            <div class="edu-item">
+                                <p class="edu-title">MA Digital Media, University of Leeds</p>
+                                <p class="edu-date">2026 - Present</p>
+                            </div>
+                            <div class="edu-item">
+                                <p class="edu-title">Bachelor of Visual Communication Design</p>
+                            </div>
+                        </div>
+
+                        <div class="about-two-columns">
+                            <div class="about-section">
+                                <h3>SKILLS</h3>
+                                <p>Figma, Framer, Tableau, Google Analytics 4, Maze, UI/UX Design, User Research, Motion Graphics, HTML/CSS</p>
+                            </div>
+
+                            <div class="about-section">
+                                <h3>LANGUAGES</h3>
+                                <p>English (Proficient), Mandarin Chinese (Native)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+           <!-- 3. Reflection 页面 -->
+            <section id="reflection" class="page-section">
+                <div class="reflection-layout">
+                    
+                    <!-- 左侧内容区 -->
+                    <div class="reflection-main">
+                        <!-- 大标题 -->
+                        <h1 class="ref-heading-red" id="ref-title">Week 1 Reflection</h1>
+
+                        <!-- 反思文字 -->
+                        <div class="ref-text-yellow" id="ref-desc"></div>
+
+                        <!-- 图片展示区 -->
+                        <div class="ref-gallery-green" id="ref-images"></div>
+                    </div>
+
+                    <!-- 右侧边栏区域 -->
+                    <div class="reflection-sidebar">
+                        
+                        <!-- 【就是这一块代码！如果之前没有显示，请补充上这一段】 -->
+                        <div class="ref-header-blue">
+                            <h2>My<br>Reflection</h2>
+                            <p>Weekly thoughts, learnings, and project documentations.</p>
+                        </div>
+
+                    <!-- 右侧边栏区域 (含左侧分隔竖线) -->
+                    <ul class="ref-list">
+    <li class="ref-menu-item active" data-week="0">
+        <span class="dot">•</span>
+        <span class="num">01</span>
+        <span class="name">Week 1 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="1">
+        <span class="dot">•</span>
+        <span class="num">02</span>
+        <span class="name">Week 2 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="2">
+        <span class="dot">•</span>
+        <span class="num">03</span>
+        <span class="name">Week 3 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="3">
+        <span class="dot">•</span>
+        <span class="num">04</span>
+        <span class="name">Week 4 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="4">
+        <span class="dot">•</span>
+        <span class="num">05</span>
+        <span class="name">Week 5 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="5">
+        <span class="dot">•</span>
+        <span class="num">06</span>
+        <span class="name">Week 6 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="6">
+        <span class="dot">•</span>
+        <span class="num">07</span>
+        <span class="name">Week 7 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="7">
+        <span class="dot">•</span>
+        <span class="num">08</span>
+        <span class="name">Week 8 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="8">
+        <span class="dot">•</span>
+        <span class="num">09</span>
+        <span class="name">Week 9 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+    <li class="ref-menu-item" data-week="9">
+        <span class="dot">•</span>
+        <span class="num">10</span>
+        <span class="name">Week 10 Reflection</span>
+        <span class="arrow">&rarr;</span>
+    </li>
+</ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+   
+    <!-- 交互脚本 -->
+    <script>
+        // 1. Reflection 动态数据配置 (扩展至 Week 10)
+        const reflectionData = [
+            {
+                title: "Week 1 Reflection",
+                desc: "In Week 1, our module introduced digital practices and our approach to studying digital media. During the class, the teacher raised a thought-provoking question: whether tools like Google or generative AI are making us stupid.\nWhen first encountering these ideas, it is easy to fall into Technological Determinism, which views technology as developing independently and unilaterally controlling society. However, the lecture taught us to reject this simplistic perspective. Through learning about the Social Construction of Technology and the Social Shaping approach,we realized that society and technology co-determine each other. Technologies are not neutral tools; they carry the values and biases of their designers. This reminds us not to view issues in a one-sided way.\nIn addition, the teachers clearly outlined the upcoming course syllabus and arrangements during the lecture, giving us a clear understanding of our future tasks and laying a solid foundation for our subsequent exploration.",
+                images: [
+                    "images/Week1 p1.jpg",
+                    "images/Week1 p2.jpg",
+                    "images/Week1 p3.jpg"
+                ]
+            },
+            {
+                title: "Week 2 Reflection",
+                desc: "In Week 2, our module focused on building and publishing websites. The teachers provided two platforms: the university's CampusPress, and coding from scratch using Visual Studio Code.\nDuring the class, the teacher first guided us to make a preliminary attempt using CampusPress. I clicked 'Add New ', filled in the site name, and successfully created the website. Then, I used the design features to choose a theme and enriched the website content. After that, we learned the basics of HTML and CSS, and used GitHub for deployment.\nThrough the class, I learned the basic code for building websites. After class, I tried building a website by myself. I used HTML to build the framework and CSS to style and beautify the pages. This practical experience gave me a more intuitive understanding of how websites are built from the ground up.",
+                images: [
+                    "images/Week2 p1.png",
+                    "images/Week2 p2.png",
+                    "images/Week2 p3.png"
+                ]
+            },
+            {
+                title: "Week 3 Reflection",
+                desc: "In Week 3, we learned about web scraping. We used a Google Chrome extension called WebScraper.io. I used the BBC website to practice. I right-clicked on the page, selected Inspect, and opened the developer window. My goal was to scrape the names of different shows.\nAt first, I was not familiar with the tool or the process. I tried using the automatic selection tool, but it could not pick the title information accurately. As a result, I got no data.\nTo solve this, I checked the reference files on Minerva, which gave me clear guidance. I also asked my teacher for help. My teacher showed me how to inspect the page code directly and enter the correct code selectors. With this method, I successfully scraped the target show names.\nThis experience was very helpful. I learned that facing problems with new tools is completely normal. By reading resources and asking for help, I solved the technical issue. I also gained a better understanding of how web page structures work.",
+                images: [
+                    "images/Week3 p1.png",
+                    "images/Week3 p2.png",
+                    "images/Week3 p3.png"
+                ]
+            },
+            {
+                title: "Week 4 Reflection",
+                desc: "Week 4 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 4.",
+                images: [
+                    "images/Week4 p1.png",
+                    "images/Week4 p2.png",
+                    "images/Week4 p3.png"
+                ]
+            },
+            {
+                title: "Week 5 Reflection",
+                desc: "Week 5 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 5.",
+                images: [
+                    "images/Week5 p1.png",
+                    "images/Week5 p2.png",
+                    "images/Week5 p3.png"
+                ]
+            },
+            {
+                title: "Week 6 Reflection",
+                desc: "Week 6 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 6.",
+                images: [
+                    "images/Week6 p1.png",
+                    "images/Week6 p2.png",
+                    "images/Week6 p3.png"
+                ]
+            },
+            {
+                title: "Week 7 Reflection",
+                desc: "Week 7 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 7.",
+                images: [
+                    "images/Week7 p1.png",
+                    "images/Week7 p2.png",
+                    "images/Week7 p3.png"
+                ]
+            },
+            {
+                title: "Week 8 Reflection",
+                desc: "Week 8 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 8.",
+                images: [
+                    "images/Week8 p1.png",
+                    "images/Week8 p2.png",
+                    "images/Week8 p3.png"
+                ]
+            },
+            {
+                title: "Week 9 Reflection",
+                desc: "Week 9 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 9.",
+                images: [
+                    "images/Week9 p1.png",
+                    "images/Week9 p2.png",
+                    "images/Week9 p3.png"
+                ]
+            },
+            {
+                title: "Week 10 Reflection",
+                desc: "Week 10 reflection content goes here. You can edit this text later with your thoughts and learnings for Week 10.",
+                images: [
+                    "images/Week10 p1.png",
+                    "images/Week10 p2.png",
+                    "images/Week10 p3.png"
+                ]
+            }
+        ];
+
+        // 2. 定义渲染 Reflection 内容的核心函数
+        function loadReflectionWeek(weekIndex) {
+            // 高亮右侧菜单项
+            const menuItems = document.querySelectorAll('.ref-menu-item');
+            menuItems.forEach(el => el.classList.remove('active'));
+            if (menuItems[weekIndex]) {
+                menuItems[weekIndex].classList.add('active');
+            }
+
+            // 更新左侧标题、反思文本和图片
+            const data = reflectionData[weekIndex];
+            if (data) {
+                document.getElementById('ref-title').innerText = data.title;
+                
+                // 保留文本换行格式
+                const descContainer = document.getElementById('ref-desc');
+                descContainer.innerText = data.desc;
+                descContainer.style.whiteSpace = "pre-line";
+
+                // 重新渲染图片列表
+                const imagesContainer = document.getElementById('ref-images');
+                imagesContainer.innerHTML = '';
+                data.images.forEach(imgUrl => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'img-wrapper';
+                    wrapper.innerHTML = `<img src="${imgUrl}" alt="${data.title}">`;
+                    imagesContainer.appendChild(wrapper);
+                });
+            }
+        }
+
+        // 3. 顶栏主导航菜单切换逻辑
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 切换顶栏 active 状态
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+
+                // 切换页面展示
+                const targetId = this.getAttribute('data-target');
+                document.querySelectorAll('.page-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+
+                // 点击 Reflection 时，自动直接展示 Week 1
+                if (targetId === 'reflection') {
+                    loadReflectionWeek(0);
+                }
+            });
+        });
+
+        // 4. 右侧周次列表点击切换事件
+        document.querySelectorAll('.ref-menu-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const weekIndex = parseInt(this.getAttribute('data-week'));
+                loadReflectionWeek(weekIndex);
+            });
+        });
+    </script>
