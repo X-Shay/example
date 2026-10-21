@@ -1,0 +1,434 @@
+
+/* 1. 全局重置与统一衬线字体设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", Times, serif;
+    background-color: #f4f4f2;
+    background-image: radial-gradient(#d5d5d3 1px, transparent 1px);
+    background-size: 10px 10px;
+    color: #111111;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2. 顶部固定毛玻璃导航栏 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(244, 244, 242, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #111;
+    position: relative;
+    padding-bottom: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #111;
+}
+
+/* 3. 主页面容器 */
+.container {
+    width: 100%;
+    max-width: 1240px;
+    min-height: 100vh;
+    padding: 120px 40px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-section {
+    display: none;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.page-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Home 页面 (Landing Page - 带有静态点阵素材) */
+#home.page-section.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 70vh;
+    position: relative;
+}
+
+.hero-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 58px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    color: #555555;
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+}
+
+/* 分散点阵装饰图案 (静态不旋转/不上浮) */
+.decor-item {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.85;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+
+.flower-top-left {
+    width: 160px;
+    height: 160px;
+    top: -20px;
+    left: 40px;
+    background-image: url("images/Flower.png");
+}
+
+.star-top-right {
+    width: 130px;
+    height: 130px;
+    top: -10px;
+    right: 50px;
+    background-image: url("images/Star.png");
+}
+
+.star-bottom-left {
+    width: 90px;
+    height: 90px;
+    bottom: 0px;
+    left: 100px;
+    background-image: url("images/Star.png");
+}
+
+.flower-bottom-right {
+    width: 140px;
+    height: 140px;
+    bottom: -10px;
+    right: 80px;
+    background-image: url("images/Flower.png");
+}
+
+/* 5. About Me 页面 */
+.about-main-title {
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-image-container {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #eee;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.profile-name {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 10px;
+}
+
+.about-section h3 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #222;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.about-section p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.about-section.full-width {
+    width: 100%;
+}
+
+.edu-item {
+    margin-bottom: 12px;
+}
+
+.edu-title {
+    font-weight: 600;
+}
+
+.edu-date {
+    color: #777;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.about-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* 6. Reflection 页面 (含左侧垂直划线与前置小黑点) */
+.reflection-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 0;
+    align-items: start;
+}
+
+.reflection-main {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.ref-heading-red {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    color: #111;
+}
+
+.ref-text-yellow {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 95%;
+}
+
+.ref-gallery-green {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #e5e5e5;
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img-wrapper img:hover {
+    transform: scale(1.03);
+}
+
+/* 右侧侧边栏及分隔线 */
+.reflection-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 40px;
+    border-left: 1px solid #e0e0e0; /* 左侧划线 */
+}
+
+.ref-header-blue h2 {
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.ref-header-blue p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.ref-list {
+    list-style: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ref-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 15px;
+    color: #777;
+    transition: all 0.2s ease;
+}
+
+.ref-menu-item:hover {
+    color: #000;
+}
+
+.ref-menu-item.active {
+    color: #000;
+    font-weight: 700;
+}
+
+/* 列表前的小黑点 */
+.ref-menu-item .dot {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #ccc;
+    transition: color 0.2s ease;
+}
+
+.ref-menu-item.active .dot,
+.ref-menu-item:hover .dot {
+    color: #000;
+}
+
+.ref-menu-item .num {
+    font-size: 13px;
+    width: 30px;
+    color: #999;
+}
+
+.ref-menu-item .name {
+    flex: 1;
+}
+
+.ref-menu-item .arrow {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.ref-menu-item.active .arrow,
+.ref-menu-item:hover .arrow {
+    opacity: 1;
+}
+
+/* 7. 响应式布局 */
+@media (max-width: 850px) {
+    .reflection-layout {
+        grid-template-columns: 1fr;
+    }
+    .reflection-main {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .reflection-sidebar {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 40px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-two-columns {
+        grid-template-columns: 1fr;
+    }
+    .ref-gallery-green {
+        grid-template-columns: 1fr;
+    }
+}
